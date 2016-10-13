@@ -6,8 +6,8 @@
     <artifactId>autocomplete</artifactId>
     <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Enter project name here</name>
-    <description>Enter project description here</description>
+    <name>Autocomplete</name>
+    <description>Demo of autocomplete feature in Java</description>
 
     <prerequisites>
         <maven>3.0.4</maven>

@@ -94,4 +94,22 @@ public class AutocompleteListTest
     assertThat(actual, contains("Amstelveen", "Amsterdam", "Antwerpen"));
   }
 
+  @Test
+  public void removeByName_IfEntryWithTheSameNameExists_RemovesTheEntry()
+  {
+    sut.add(new Entry("Amsterdam", 1));
+    assertThat(sut.size(), is(1));
+    sut.removeWithName("Amsterdam");
+    assertThat(sut.size(), is(0));
+  }
+
+  @Test
+  public void add_WhenEntryWithTheSameNameExists_ReplacesTheEntry()
+  {
+    sut.add(new Entry("Amsterdam", 1));
+    assertThat(sut.size(), is(1));
+    sut.add(new Entry("Amsterdam", 2));
+    assertThat(sut.size(), is(1));
+  }
+
 }
