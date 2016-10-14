@@ -29,6 +29,7 @@ public final class AutocompleteTrie
         pCrawl.addChild(new AutocompleteTrieNode(currentCharacter, entry.weight()));
       }
       pCrawl = pCrawl.childWith(currentCharacter);
+      pCrawl.changeWeight(entry.weight());
     }
     pCrawl.makeLeaf();
   }
@@ -62,6 +63,17 @@ public final class AutocompleteTrie
 
   public List<String> autocomplete(final String userInput)
   {
+    if (userInput.isEmpty())
+    {
+      return Collections.emptyList();
+    }
+    char firstLetter = userInput.charAt(0);
+    if (!root.hasChild(firstLetter))
+    {
+      return Collections.emptyList();
+    }
+    AutocompleteTrieNode subtrieWithLetter = root.childWith(firstLetter);
+    //return all strings in subtrie which are prefixed by whole userInput
     return Collections.emptyList();
   }
 
