@@ -70,4 +70,12 @@ public final class AutocompleteTrieNode
   {
     isLeaf = true;
   }
+
+  public void changeWeight(final int weight)
+  {
+    if (weight > this.weight)
+    {
+      this.weight = weight;
+    }
+  }
 }
