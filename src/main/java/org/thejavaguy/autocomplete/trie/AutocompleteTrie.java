@@ -1,9 +1,9 @@
 package org.thejavaguy.autocomplete.trie;
 
-import org.thejavaguy.autocomplete.Entry;
-
 import java.util.Collections;
 import java.util.List;
+
+import org.thejavaguy.autocomplete.Entry;
 
 /**
  * @author Ivan Milosavljevic imilosavljevic@novomaticls.com

@@ -1,6 +1,6 @@
 package org.thejavaguy;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;

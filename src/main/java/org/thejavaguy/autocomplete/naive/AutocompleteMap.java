@@ -1,7 +1,5 @@
 package org.thejavaguy.autocomplete.naive;
 
-import org.thejavaguy.autocomplete.Entry;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -9,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import org.thejavaguy.autocomplete.Entry;
 
 /**
  * @author Ivan Milosavljevic imilosavljevic@novomaticls.com

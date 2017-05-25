@@ -30,6 +30,26 @@ public final class SimpleAutocompleteTrie {
 		if (root.size() == 0) {
 			return Collections.emptyList();
 		}
+		SimpleAutocompleteTrieNode current = root;
+		boolean hasPrefix = true;
+		for (int i = 0; i < userInput.length(); ++i) {
+		    char currentChar = userInput.charAt(i);
+		    if (current.hasChild(currentChar)) {
+		        current = current.childFor(currentChar);
+		    } else {
+		        hasPrefix = false;
+		        break;
+		    }
+		}
+		if (hasPrefix) {
+		    return current.words();
+		} else {
+		    return Collections.emptyList();		    
+		}
+	}
+	
+	public List<String> allWords() {
+	    return root.words();
 	}
 
 	@Override
